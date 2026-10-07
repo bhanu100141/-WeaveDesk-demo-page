@@ -123,23 +123,16 @@
         0 1px 1px rgba(28, 26, 23, 0.03),
         0 2px 4px rgba(28, 26, 23, 0.03),
         0 16px 40px -18px rgba(28, 26, 23, 0.16);
-      transition: transform 0.25s cubic-bezier(.2,.7,.2,1), box-shadow 0.25s ease, border-color 0.25s ease;
-    }
-    /* A thin terracotta rule across the top: the card's one flourish. */
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--terracotta) 0%, #d9825d 55%, rgba(217, 130, 93, 0) 100%);
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.45s ease;
+      will-change: transform;
     }
     .card:hover {
-      transform: translateY(-4px);
-      border-color: #d6c3ab;
+      transform: translateY(-2px);
+      border-color: #dccbb6;
       box-shadow:
         0 1px 1px rgba(28, 26, 23, 0.04),
         0 4px 8px rgba(28, 26, 23, 0.04),
-        0 28px 56px -22px rgba(181, 71, 28, 0.28);
+        0 24px 48px -24px rgba(181, 71, 28, 0.22);
     }
     .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(10px, 2vh, 18px); }
     .icon {
@@ -166,7 +159,7 @@
       flex-shrink: 0; width: 20px; height: 20px; margin-top: 0; padding: 4px;
       border-radius: 999px; background: var(--terracotta-soft); color: var(--terracotta);
     }
-    .card .divider { height: 1px; background: var(--line-soft); margin: 0 0 clamp(14px, 2.2vh, 20px); }
+
 
     .btn {
       display: flex; align-items: center; justify-content: center; gap: 10px;
@@ -231,7 +224,6 @@
 
   <main class="wrap">
     <section class="hero">
-      <span class="eyebrow"><span class="dot"></span>Live product demo</span>
       <h1>WeaveDesk <em>Demo</em></h1>
     </section>
 
@@ -250,7 +242,6 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>RFQs to vendors, quotes compared side by side</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Orders, stock availability and delivery tracking</li>
         </ul>
-        <div class="divider"></div>
         <a class="btn" href="https://demo.weavedesk.ai/">
           Open Trader Demo
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -272,7 +263,6 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Specs decoded by AI; price quoted and negotiated on the buyer&rsquo;s channel</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Stock availability and team response-time reports</li>
         </ul>
-        <div class="divider"></div>
         <a class="btn" href="https://manufacturer.weavedesk.ai/login">
           Open Manufacturer Demo
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
